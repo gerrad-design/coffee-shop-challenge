@@ -2,6 +2,12 @@ import unittest
 from order import Order
 from customer import Customer
 from coffee import Coffee
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+from coffee import Coffee
+
 
 class TestOrder(unittest.TestCase):
     def setUp(self):

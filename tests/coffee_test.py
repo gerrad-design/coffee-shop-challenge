@@ -1,7 +1,16 @@
-import unittest
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 from coffee import Coffee
-from customer import Customer
+import unittest
 from order import Order
+from customer import Customer
+
+def test_coffee_name():
+    coffee = Coffee("Latte")
+    assert coffee.name == "Latte"
+
 
 class TestCoffee(unittest.TestCase):
     def setUp(self):
